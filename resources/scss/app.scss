@@ -1,6 +1,44 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.create {
+    width: 60%;
+    margin: 0 auto;
+
+    #title_create {
+        text-align: center;
+        color: $linkcolor;
+    }
+
+    form {
+        margin-bottom: 40px;
+
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 14px;
+            background-color: $linkHover;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+    }
+}
