@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Movie;
 
 class MovieController extends Controller
 {
@@ -11,7 +12,8 @@ class MovieController extends Controller
      */
     public function index()
     {
-        //
+        $movies = Movie::All();
+        return view("pages.home",compact("comics"));
     }
 
     /**
@@ -19,7 +21,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        return view("pages.create");
     }
 
     /**
@@ -27,7 +29,18 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        $formData = $request->all();
+
+        $newMovie = new Movie();
+        $newMovie->fill($formData);
+
+
+        $newMovie->save();
+
+        return redirect()->route('welcome');
+
     }
 
     /**
