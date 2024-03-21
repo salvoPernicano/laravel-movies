@@ -1,4 +1,4 @@
-@extends('pages.app')
+@extends('layouts.app')
 
 @section('title', 'Movies Home')
 
